@@ -7,10 +7,11 @@ export default class Companysignup extends Component {
         super(props);
 
         this.onChangeCompanyName = this.onChangeCompanyName.bind(this);
-        this.onChangeCompanAddress = this.onChangeCompanAddress.bind(this);
-        this.onChangeCompnayEmail = this.onChangeCompnayEmail.bind(this);
+        this.onChangeCompanyAddress = this.onChangeCompanyAddress.bind(this);
+        this.onChangeCompanyEmail = this.onChangeCompanyEmail.bind(this);
         this.onChangeCompanyPhone = this.onChangeCompanyPhone.bind(this);
-        this.onChangeCompnayPass = this.onChangeCompnayPass.bind(this);
+        this.onChangeCompanyWebsite = this.onChangeCompanyWebsite.bind(this);
+        this.onChangeCompanyPass = this.onChangeCompanyPass.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
@@ -29,13 +30,13 @@ export default class Companysignup extends Component {
             company_name: e.target.value
         });
     }
-    onChangeCompanAddress(e) {
+    onChangeCompanyAddress(e) {
         this.setState({
             company_address: e.target.value
         });
     }
 
-    onChangeCompnayEmail(e) {
+    onChangeCompanyEmail(e) {
         this.setState({
             company_email: e.target.value
         });
@@ -47,7 +48,13 @@ export default class Companysignup extends Component {
         });
     }
 
-    onChangeCompnayPass(e) {
+    onChangeCompanyWebsite(e) {
+        this.setState({
+            company_website: e.target.value
+        });
+    }
+
+    onChangeCompanyPass(e) {
         this.setState({
             company_pass: e.target.value
         });
@@ -140,7 +147,7 @@ export default class Companysignup extends Component {
 
                     <div className="form-group">
                         <label>Password: </label>
-                        <input  type="text"
+                        <input  type="password"
                                 className="form-control"
                                 value={this.state.company_pass}
                                 onChange={this.onChangeCompanyPass}

@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import CompanySignup from "./components/company-signup.component";
 import StudentSignup from "./components/student-signup.component";
-import Login from "./components/login.component";
+import StudentLogin from "./components/student-login.component";
+import CompanyLogin from "./components/company-login.component";
 
 import logo from "./logo.png";
 
@@ -28,7 +29,10 @@ class App extends Component {
                   <Link to="/companysignup" className="nav-link">Company Signup</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/login" className="nav-link">Login</Link>
+                  <Link to="/companylogin" className="nav-link">Company Login</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/studentlogin" className="nav-link">Student Login</Link>
                 </li>
               </ul>
             </div>
@@ -36,7 +40,8 @@ class App extends Component {
 
           <Route path="/studentsignup" exact component={StudentSignup} />
           <Route path="/companysignup" exact component={CompanySignup} />
-          <Route path="/login" exact component={Login} />
+          <Route path="/companylogin" exact component={CompanyLogin} />
+          <Route path="/studentlogin" exact component={StudentLogin} />
 
         </div>
       </Router>

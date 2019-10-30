@@ -8,6 +8,7 @@ export default class Studentsignup extends Component {
 
         this.onChangeStudentName = this.onChangeStudentName.bind(this);
         this.onChangeStudentEmail = this.onChangeStudentEmail.bind(this);
+        this.onChangeStudentPhone = this.onChangeStudentPhone.bind(this);
         this.onChangeStudentEducation = this.onChangeStudentEducation.bind(this);
         this.onChangeStudentPercentage = this.onChangeStudentPercentage.bind(this);
         this.onChangeStudentPass = this.onChangeStudentPass.bind(this);
@@ -148,7 +149,7 @@ export default class Studentsignup extends Component {
 
                     <div className="form-group">
                         <label>Password: </label>
-                        <input  type="text"
+                        <input  type="password"
                                 className="form-control"
                                 value={this.state.student_pass}
                                 onChange={this.onChangeStudentPass}
